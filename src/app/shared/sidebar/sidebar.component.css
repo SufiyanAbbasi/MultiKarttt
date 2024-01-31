@@ -1,0 +1,101 @@
+/* main{
+    position: sticky;
+ 
+}  */
+main {
+    position: absolute;
+    margin-top: 10px;
+    left: 0rem;
+    width: 100%;
+    /* height: calc(100vh - 4rem); */
+}
+
+/* .sbar {
+    position: -webkit-sticky;
+    position: sticky;
+} */
+
+
+option {
+    border: none;
+    width: 180px;
+    padding: 10px;
+}
+
+select {
+    border: none;
+    width: 180px;
+
+}
+
+select:focus {
+    outline: none;
+}
+
+ul:focus {
+    outline: none;
+    border: none;
+}
+
+ul:active {
+    outline: none;
+    border: none;
+}
+
+li:active {
+    outline: none;
+    border: none;
+}
+
+li:focus {
+    outline: none;
+    border: none;
+}
+
+.mybtn:active {
+    outline: none;
+    border: none;
+}
+
+.mybtn:focus {
+    outline: none;
+    border: none;
+}
+
+.sublist {
+    margin-top: -15px;
+    list-style: circle;
+}
+
+.mylist {
+    margin-top: -20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.arrow-icon.rotated {
+    transform: rotate(90deg);
+}
+
+ul.mylist {
+    outline: none;
+    border: none;
+}
+
+.last svg {
+    width: 20px;
+
+}
+/* Dashboard   */
+.dashboard-content {
+    flex: 1;
+  }
+  
+  /* Adjust the dashboard to fill the full width when the sidebar is hidden */
+  .dashboard-content.full-width {
+    width: 100%;
+    
+
+  }

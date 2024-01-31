@@ -1,0 +1,36 @@
+.mypara{
+    margin-top: -15px;
+}
+.this{
+    font-size: small;
+}
+.box2{
+    background-color: #13c9ca;
+}
+.box2 svg{
+    color: #13c9ca;
+}
+
+.box3{
+    background-color: #ff8084;
+}
+.box3 svg{
+    color: #ff8084;
+}
+.box4{
+    background-color: #a5a5a5;
+}
+.box4 svg{
+    color: #a5a5a5;
+}
+section{
+    background-color: #f8f8f9;
+}
+.mybtn{
+   background-color: #ff8084;
+}
+
+
+/* Adjust the dashboard to fill the full width */
+
+  

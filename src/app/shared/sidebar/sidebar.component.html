@@ -1,0 +1,41 @@
+<main class=""  [class.hidden]="!isVisible">
+    <div class="sbar">
+        <app-manprofile></app-manprofile>
+
+        <div class="lists ms-3 pt-3 bg-white">
+            <ul class="list-unstyled">
+                <li class="d-flex btn mybtn cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-home mysvg" _ngcontent-serverapp-c1626669388="">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <p class="ms-2  ps-2 mytext fw-bold">Dashboard</p>
+                </li>
+            </ul>
+            <ul class="list-unstyled mylist">
+                @for(box of mylist.num; track id){
+                <li class="d-flex btn mybtn cursor-pointer justify-content-between">
+                    <fa-icon [icon]="box.myicon" size="lg"></fa-icon>
+                    <div class="d-flex  ms-3 justify-content-between" style="width: 80%;">
+                    <p class="ms-2  fw-bold">{{box.title}}</p>
+                    <svg class="arrow-icon mt-1 lastsvg" [class.rotated]="box.isSublistVisible ? 'rotated' : ''"
+                        (click)="toggleSublist(box)" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </div>
+                </li>
+                <ul class="sublist ms-2" [class.hidden]="!box.isSublistVisible">
+                    @for(items of box.sublists; track id){
+                    <li class="ms-4  ps-2 opacity-50">{{items}}</li>
+                    }
+                </ul>
+                }
+            </ul>
+        </div>
+    </div>
+
+</main>
