@@ -4,22 +4,24 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBox, faChevronCircleDown, faCouch, faDollar, faFileInvoice, faLocation, faPager, faPeopleArrows, faReceipt, faSignIn, faToolbox, faTrash, faUser, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { CommonModule } from '@angular/common';
 import { SidebarService } from '../../core/services/sidebar.service';
+import { Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-sidebar',
     standalone: true,
     templateUrl: './sidebar.component.html',
     styleUrl: './sidebar.component.css',
-    imports: [ManprofileComponent, FontAwesomeModule, CommonModule],
+    imports: [ManprofileComponent, FontAwesomeModule, CommonModule, RouterLink],
 })
-export class SidebarComponent implements OnInit{
+export class SidebarComponent implements OnInit {
     isVisible: boolean = false;
-    constructor(private sidebarService:SidebarService){}
+    constructor(private sidebarService: SidebarService, private router: Router) { }
     ngOnInit(): void {
         this.sidebarService.getVisibility().subscribe((isVisible: boolean) => {
-          this.isVisible = isVisible;
+            this.isVisible = isVisible;
         });
-      }
+    }
 
     faBox = faBox;
     id: any
@@ -113,9 +115,19 @@ export class SidebarComponent implements OnInit{
         ]
     }
 
-    toggleSublist(item: any) {
-        item.isSublistVisible = !item.isSublistVisible;
-      }
+    toggleSublist(box: any) {
+        box.isSublistVisible = !box.isSublistVisible;
+    }
 
+    //   Routing 
+
+    navigateToSection(section: string) {
+        this.router.navigate([section]);
+    }
+
+    navigateToSublist(sublist: string, section: string) {
+        this.router.navigate([section, sublist]);
+
+    }
 
 }

@@ -7,14 +7,16 @@ import { ChartsComponent } from '../../shared/charts/charts.component';
 import { TablesComponent } from '../../shared/table/tables/tables.component';
 import { EmptableComponent } from "../../shared/table/emptable/emptable.component";
 import { CommonModule } from '@angular/common';
+import { DbboxesComponent } from "../../shared/dbboxes/dbboxes.component";
+import { FooterComponent } from "../../shared/footer/footer.component";
 
 
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css',
-  imports: [FontAwesomeModule, CommonModule, ChartsComponent, TablesComponent, EmptableComponent]
+    selector: 'app-dashboard',
+    standalone: true,
+    templateUrl: './dashboard.component.html',
+    styleUrl: './dashboard.component.css',
+    imports: [FontAwesomeModule, CommonModule, ChartsComponent, TablesComponent, EmptableComponent, DbboxesComponent, FooterComponent]
 })
 export class DashboardComponent  {
 

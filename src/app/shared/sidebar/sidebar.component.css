@@ -88,6 +88,10 @@ ul.mylist {
     width: 20px;
 
 }
+.mylist li:hover{
+    color: #ff8084;;
+}
+
 /* Dashboard   */
 .dashboard-content {
     flex: 1;

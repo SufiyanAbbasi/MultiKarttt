@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCoffee,faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { SidebarService } from '../../core/services/sidebar.service';
+import { FullScreenService } from '../../core/services/full-screen.service';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,11 @@ export class HeaderComponent implements OnInit{
   faCoffee = faCoffee;
   search = faMagnifyingGlass;
 
-  constructor(private sidebarService: SidebarService) { }
+  constructor(private sidebarService: SidebarService, private fullScreenService:FullScreenService) { }
+
+  toggleFullScreen() {
+    this.fullScreenService.toggleFullScreen();
+  }
   
   ngOnInit(): void {
   }
@@ -22,4 +27,5 @@ export class HeaderComponent implements OnInit{
   toggleSidebar(): void {
     this.sidebarService.toggleVisibility();
   }
+  
 }

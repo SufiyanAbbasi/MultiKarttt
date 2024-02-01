@@ -9,3 +9,15 @@
 .btn:focus{
   outline: none;
 }
+.mybar{
+  /* border: 2px solid red; */
+  position: absolute;
+  background-color: #f8f8f9;
+  width: 80%;
+  left: 20%;
+  padding-left: 30px;
+}
+
+/* .cursvg{ */
+  /* cursor: pointer; */
+/* } */

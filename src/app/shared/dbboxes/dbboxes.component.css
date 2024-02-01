@@ -4,6 +4,9 @@
 .this{
     font-size: small;
 }
+.box{
+    background-color: #ffbc58;
+}
 .box2{
     background-color: #13c9ca;
 }
@@ -29,6 +32,7 @@ section{
 .mybtn{
    background-color: #ff8084;
 }
+
 
 /* Adjust the dashboard to fill the full width */
 

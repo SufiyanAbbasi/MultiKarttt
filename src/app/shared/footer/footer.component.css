@@ -1,0 +1,10 @@
+p{
+    font-size: 14px;
+}
+.myfooter{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    align-content: center;
+    background-color: white;
+}

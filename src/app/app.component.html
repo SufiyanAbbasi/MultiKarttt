@@ -1,5 +1,7 @@
 <app-header></app-header>
-<div class="d-flex">
+<div class="d-flex"  [ngClass]="{ 'fullscreen': isFullScreen }">
     <app-sidebar class="sticky-sidebar"></app-sidebar>
-    <app-dashboard class="dashboard-content"></app-dashboard>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
 </div>
