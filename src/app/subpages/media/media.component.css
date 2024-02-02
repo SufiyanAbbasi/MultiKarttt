@@ -1,0 +1,20 @@
+.num{
+    border-right: 1px solid grey;
+    height: 40px;
+    
+}
+.num:hover{
+    cursor: pointer;
+}
+
+td , tr ,th {
+    height: 60px;
+}
+.mybor{
+    border: 2px dashed #ff8084;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}

@@ -4,12 +4,12 @@ import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-transactions',
+    selector: 'app-couponslist',
     standalone: true,
-    templateUrl: './transactions.component.html',
-    styleUrl: './transactions.component.css',
-    imports: [FooterComponent, RouterLink, CommonModule]
+    templateUrl: './couponslist.component.html',
+    styleUrl: './couponslist.component.css',
+    imports: [FooterComponent,RouterLink, CommonModule]
 })
-export class TransactionsComponent {
+export class CouponslistComponent {
 
 }

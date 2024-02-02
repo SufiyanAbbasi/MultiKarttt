@@ -3,7 +3,7 @@
         <app-manprofile></app-manprofile>
 
         <div class="lists ms-3 pt-3 bg-white ">
-            <ul class="list-unstyled">
+            <ul class="list-unstyled" routerLink="">
                 <li class="d-flex btn mybtn cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -15,35 +15,15 @@
                 </li>
             </ul>
 
-            <!-- <ul class="list-unstyled mylist">
-                @for(box of mylist.num; track id){
-                <li class="d-flex btn mybtn cursor-pointer justify-content-between">
-                    <fa-icon [icon]="box.myicon" size="lg"></fa-icon>
-                    <div class="d-flex  ms-3 justify-content-between" style="width: 80%;">
-                    <p class="ms-2  fw-bold">{{box.title}}</p>
-                    <svg class="arrow-icon mt-1 lastsvg" [class.rotated]="box.isSublistVisible ? 'rotated' : ''"
-                        (click)="toggleSublist(box)" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M9 18l6-6-6-6" />
-                    </svg>
-                </div>
-                </li>
-                <ul class="sublist ms-2" [class.hidden]="!box.isSublistVisible">
-                    @for(items of box.sublists; track id){
-                    <li class="ms-4  ps-2 opacity-50">{{items}}</li>
-                    }
-                </ul>
-                }
-            </ul> -->
+      
             <ul class="list-unstyled mylist">
                 @for(box of mylist.num;track id) {
-                <li class="d-flex btn mybtn cursor-pointer justify-content-between">
+                <li class="d-flex btn mybtn cursor-pointer justify-content-between" (click)="toggleSublist(box)">
                     <fa-icon [icon]="box.myicon" size="lg"></fa-icon>
                     <div class="d-flex ms-3 justify-content-between" style="width: 80%;">
                         <p class="ms-2 fw-bold" (click)="navigateToSection(box.title.toLowerCase())">{{box.title}}</p>
                         <svg class="arrow-icon mt-1 lastsvg" [class.rotated]="box.isSublistVisible ? 'rotated' : ''"
-                            (click)="toggleSublist(box)" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                             xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" viewBox="0 0 24 24">
                             <path d="M9 18l6-6-6-6" />

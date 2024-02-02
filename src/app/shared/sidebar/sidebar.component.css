@@ -27,7 +27,9 @@ select {
     width: 180px;
 
 }
-
+li{
+    cursor: pointer;
+}
 select:focus {
     outline: none;
 }

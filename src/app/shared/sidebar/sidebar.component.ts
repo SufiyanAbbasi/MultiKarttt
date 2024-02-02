@@ -16,6 +16,11 @@ import { RouterLink } from '@angular/router';
 })
 export class SidebarComponent implements OnInit {
     isVisible: boolean = false;
+
+    sectionRoutes: { [key: string]: string } = {
+        'Media': '/media',
+        // Add more sections and their routes as needed
+    };
     constructor(private sidebarService: SidebarService, private router: Router) { }
     ngOnInit(): void {
         this.sidebarService.getVisibility().subscribe((isVisible: boolean) => {
@@ -122,7 +127,14 @@ export class SidebarComponent implements OnInit {
     //   Routing 
 
     navigateToSection(section: string) {
-        this.router.navigate([section]);
+        // Check if the section has a specific route
+        if (this.sectionRoutes[section]) {
+            // If yes, navigate to the corresponding route
+            this.router.navigate([this.sectionRoutes[section]]);
+        } else {
+            // Otherwise, navigate to the section itself
+            this.router.navigate([section]);
+        }
     }
 
     navigateToSublist(sublist: string, section: string) {

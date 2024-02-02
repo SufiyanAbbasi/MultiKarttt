@@ -6,3 +6,7 @@
 .num:hover{
     cursor: pointer;
 }
+
+td , tr ,th {
+    height: 60px;
+}

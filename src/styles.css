@@ -6,6 +6,10 @@
     color:#ff8084;
 
 }
+.mycbtn{
+  background-color:#ff8084;
+
+}
 .btn:focus{
   outline: none;
 }
@@ -17,7 +21,15 @@
   left: 20%;
   padding-left: 30px;
 }
-
+/* TABLE   */
+.num{
+  border-right: 1px solid grey;
+  height: 40px;
+  
+}
+.num:hover{
+  cursor: pointer;
+}
 /* .cursvg{ */
   /* cursor: pointer; */
 /* } */
