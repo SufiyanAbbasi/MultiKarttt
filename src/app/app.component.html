@@ -1,7 +1,16 @@
-<app-header></app-header>
-<div class="d-flex" [ngClass]="{ 'fullscreen': isFullScreen }">
-    <app-sidebar class="sticky-sidebar"></app-sidebar>
-    <main>
-        <router-outlet></router-outlet>
-    </main>
+@if(!isLoginPageRoute){
+<div>
+    <app-header class="header"></app-header>
+    <div class="d-flex" [ngClass]="{ 'fullscreen': isFullScreen }">
+        <app-sidebar class="sticky-sidebar"></app-sidebar>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </div>
 </div>
+}
+@if(isLoginPageRoute){
+<div>
+    <router-outlet></router-outlet>
+</div>
+}

@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit{
   faCoffee = faCoffee;
   search = faMagnifyingGlass;
 
-  constructor(private sidebarService: SidebarService, private fullScreenService:FullScreenService) { }
+  constructor(private sidebarService: SidebarService, private fullScreenService:FullScreenService,) { }
 
   toggleFullScreen() {
     this.fullScreenService.toggleFullScreen();
@@ -28,4 +28,10 @@ export class HeaderComponent implements OnInit{
     this.sidebarService.toggleVisibility();
   }
   
+
+  // chatbox on notification
+  showChatbox: boolean = true;
+  // showChatboxImg: boolean = true;
+
+
 }

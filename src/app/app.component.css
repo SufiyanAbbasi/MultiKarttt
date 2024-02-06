@@ -1,6 +1,6 @@
 .sticky-sidebar {
     position: fixed;
-    /* top: 30px;  */
+    top: 90px; 
     left: 0;
     height: 500px;
     width: 20%;
@@ -49,3 +49,12 @@
 }
 
 
+/* Example CSS for a fixed header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000; 
+  }
+  

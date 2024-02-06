@@ -16,6 +16,7 @@
 .mybar{
   /* border: 2px solid red; */
   position: absolute;
+  top: 90px;
   background-color: #f8f8f9;
   width: 80%;
   left: 20%;

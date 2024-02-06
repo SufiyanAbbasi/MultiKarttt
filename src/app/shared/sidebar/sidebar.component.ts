@@ -19,6 +19,8 @@ export class SidebarComponent implements OnInit {
 
     sectionRoutes: { [key: string]: string } = {
         'Media': '/media',
+        'Reports': '/reports',
+        'Invoice': '/invoice'
         // Add more sections and their routes as needed
     };
     constructor(private sidebarService: SidebarService, private router: Router) { }
@@ -83,7 +85,7 @@ export class SidebarComponent implements OnInit {
                 id: 8,
                 myicon: faPeopleArrows,
                 title: "Vendor",
-                sublists: ['Vendor List', 'Create Vendor '],
+                sublists: ['Vendor List', 'Create Vendor'],
                 isSublistVisible: false
             },
             {
