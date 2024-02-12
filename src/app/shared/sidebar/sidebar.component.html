@@ -11,7 +11,7 @@
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                         <polyline points="9 22 9 12 15 12 15 22"></polyline>
                     </svg>
-                    <p class="ms-2  ps-2 mytext fw-bold">Dashboard</p>
+                    <p class="ms-2  ps-2 mytext" style="font-weight: 500;">Dashboard</p>
                 </li>
             </ul>
 
@@ -21,7 +21,7 @@
                 <li class="d-flex btn mybtn cursor-pointer justify-content-between" (click)="toggleSublist(box)">
                     <fa-icon [icon]="box.myicon" size="lg"></fa-icon>
                     <div class="d-flex ms-3 justify-content-between" style="width: 80%;">
-                        <p class="ms-2 fw-bold" (click)="navigateToSection(box.title.toLowerCase())">{{box.title}}</p>
+                        <p class="ms-1" style="font-weight: 500;" (click)="navigateToSection(box.title.toLowerCase())">{{box.title}}</p>
                         <svg class="arrow-icon mt-1 lastsvg" [class.rotated]="box.isSublistVisible ? 'rotated' : ''"
                              xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"

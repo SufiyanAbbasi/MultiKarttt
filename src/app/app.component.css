@@ -7,7 +7,7 @@
     /* Adjust the width as needed */
     background-color: #fff;
     /* Adjust background color if needed */
-    border-right: 1px solid #ccc;
+    /* border-right: 1px solid #ccc; */
     /* Optionally add a border */
     z-index: 100;
     /* Ensure the sidebar stays above other content */
@@ -55,6 +55,7 @@
     top: 0;
     width: 100%;
     background-color: #ffffff;
+    box-shadow: -3px 1px 3px 1px rgba(68, 102, 242, 0.1);
     z-index: 1000; 
   }
   

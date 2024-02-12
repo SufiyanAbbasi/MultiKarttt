@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary d-flex my-1 px-2 sticky-top">
+<nav class="navbar navbar-expand-lg bg-body-tertiary d-flex mt-1 px-2 sticky-top">
     <div class="container-fluid  d-flex py-2">
         <div class="justify-content-start">
             <a class="navbar-brand ml-5" href="#"><img src="../assets/images/multikart-logo.png"
@@ -19,11 +19,6 @@
         </div>
 
         <div class="collapse navbar-collapse d-flex flex-grow-0" id="navbarSupportedContent">
-
-            <!-- <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-
-            </form> -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3  d-flex justify-content-center align-items-center">
                 <li class="navbar-nav">
                     <!-- <fa-icon [icon]="search"></fa-icon>    -->
@@ -42,15 +37,27 @@
                             <line x1="3" y1="21" x2="10" y2="14"></line>
                         </svg></button>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                <li class="nav-item">
+                    <a class="nav-link  mytext" href="#" role="button" aria-expanded="false">
                         EN
+                        @if(showlang){
+                        <ul class="showlang">
+                            <li class="d-flex mt-3"><img src="../../../assets/images/um.svg" alt=""
+                                    style="width: 18px; height: 18px;"> &nbsp;<small
+                                    class="ms-4 text-muted">English</small></li>
+                            <li class="d-flex mt-3"><img src="../../../assets/images/is.svg" alt=""
+                                    style="width: 18px; height: 18px;"> &nbsp;<small
+                                    class="ms-4 text-muted">Spanish</small></li>
+                            <li class="d-flex mt-3"><img src="../../../assets/images/uy.svg" alt=""
+                                    style="width: 18px; height: 18px;"> &nbsp;<small
+                                    class="ms-4 text-muted">Portoguese</small></li>
+                            <li class="d-flex mt-3"><img src="../../../assets/images/nz.svg" alt=""
+                                    style="width: 18px; height: 18px;"> &nbsp;<small
+                                    class="ms-4 text-muted">French</small></li>
+
+                        </ul>
+                        }
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Urdu</a></li>
-                        <li><a class="dropdown-item" href="#">Pashto</a></li>
-                    </ul>
                 </li>
                 <li class="nav-item cursor-pointer">
                     <button class="btn cursor-pointer border-0 bg-none "><svg xmlns="http://www.w3.org/2000/svg"
@@ -60,22 +67,30 @@
                             <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
                             <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                         </svg>
+                        <span class="position-absolute  start-80 translate-middle badge"
+                            style="background-color:#ff8084; top: 35px;">
+                            3
+                        </span>
+                        <div class="blink"></div>
                         @if(showChatbox){
                         <div class="chatbox">
-                            <p  class="text-start">Notifications</p>
+                            <p class="text-start">Notifications</p>
                             <div>
                                 <p class="mytext mt-1 text-start">Your order are ready for Ship..!</p>
-                                <p class="ms-2  text-start">Lorem ipsum, dolor sit amet consectetur adipisi </p><hr>
+                                <p class="ms-2  text-start">Lorem ipsum, dolor sit amet consectetur adipisi </p>
+                                <hr>
 
                             </div>
                             <div>
                                 <p class="text-success mt-1 text-start">Download Complete</p>
-                                <p class="ms-2  text-start">Lorem ipsum, dolor sit amet consectetur adipisi</p><hr>
+                                <p class="ms-2  text-start">Lorem ipsum, dolor sit amet consectetur adipisi</p>
+                                <hr>
 
                             </div>
                             <div>
                                 <p class="text-muted mt-1 text-start">250 Mb trash file</p>
-                                <p class="ms-2  text-start">Lorem ipsum, dolor sit amet consectetur </p><hr>
+                                <p class="ms-2  text-start">Lorem ipsum, dolor sit amet consectetur </p>
+                                <hr>
 
                             </div>
                         </div>
@@ -83,16 +98,38 @@
                     </button>
                 </li>
                 <li class="nav-item">
-                    <button class="btn cursor-pointer border-0 bg-none "> <svg xmlns="http://www.w3.org/2000/svg"
+                    <button class="btn cursor-pointer border-0 bg-none" (click)="toggleFriendList()"> <svg xmlns="http://www.w3.org/2000/svg"
                             width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-message-square" _ngcontent-serverapp-c1626669388="">
                             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                         </svg></button>
+                    <div class="blink2"></div>
                 </li>
+
                 <li class="nav-item cursor-pointer">
-                    <a class="navbar-brand" href="#"><img src="../assets/images/man.png"
-                            style="width: 60px; height: 60px;" class="img-fluid rounded-circle" alt="Man"></a>
+                    <a class="navbar-brand"><img src="../assets/images/man.png" style="width: 60px; height: 60px;"
+                            class="img-fluid rounded-circle" alt="Man">
+                        <div class="animatemain">
+                        </div>
+
+                        @if(showlist){
+                        <ul class="showlist mt-2">
+                            <li class="d-flex mt-1" routerLink="Profile/settings"> <fa-icon [icon]="edit"
+                                    size="sm"></fa-icon> <small class="ms-2">Edit Profile</small></li>
+                            <li class="d-flex mt-1"> <fa-icon [icon]="ib" size="sm"></fa-icon> <small
+                                    class="ms-2">Inbox</small></li>
+                            <li class="d-flex mt-1"> <fa-icon [icon]="lock" size="sm"></fa-icon> <small
+                                    class="ms-2">Lock Screen</small></li>
+                            <hr>
+                            <li class="d-flex mt-1"> <fa-icon [icon]="set" size="sm"></fa-icon> <small
+                                    class="ms-2 ">Setting</small></li>
+                            <li class="d-flex mt-1" routerLink="login"> <fa-icon [icon]="logout" size="sm"></fa-icon>
+                                <small class="ms-2 ">Logout</small></li>
+                        </ul>
+                        }
+                    </a>
+
                 </li>
             </ul>
         </div>

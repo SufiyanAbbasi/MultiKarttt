@@ -1,0 +1,14 @@
+.flist{
+    width: 25%;
+    height: 80vh;
+    position: absolute;
+    margin-top: 100px;
+    right: 0;
+    background-color: #f8f8f9;
+    box-shadow: -3px 1px 3px 1px rgba(68, 102, 242, 0.1);
+
+}
+.scroll{
+    height: 60vh;
+    overflow-y: scroll;
+}

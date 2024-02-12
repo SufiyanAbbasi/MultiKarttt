@@ -17,3 +17,4 @@ export class SidebarService {
     return this.isVisible;
   }
 }
+

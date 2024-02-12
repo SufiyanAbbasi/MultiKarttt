@@ -21,4 +21,96 @@ svg{
     display: block;
 }
 
+.showlist{
+    position: absolute;
+    top: 70px; /* Adjust top position as needed */
+    right: 10px;
+    background-color: #fff;
+    padding: 10px;
+    display: none;
+    width: 200px;
+    padding: 10px 20px;
+    box-shadow: 0 0 2px 2px #f8f8f9;
+}
+a:hover .showlist{
+    display: block;
+}
 
+.showlist li{
+    list-style: none;
+}
+.showlist li:hover{
+    color:#ff8084;
+    cursor: pointer;
+}
+ul li small{
+    font-size: 18px;
+}
+
+.showlang{
+    position: absolute;
+    top: 75px; /* Adjust top position as needed */
+    right: 115px;
+    background-color: #fff;
+    padding: 10px;
+    display: none;
+    width: 200px;
+    padding: 10px 20px;
+    box-shadow: 0 0 2px 2px #f8f8f9;
+}
+.showlang li{
+    list-style: none;
+}
+.showlang  li small{
+    font-size: 18px;
+    margin-top: -5px;
+}
+a:hover .showlang{
+    display: block;
+}
+.blink{
+    width: 3px;
+    height: 3px;
+    border-radius: 30px;
+    background-color: #ff8084;
+    position: absolute;
+    right: 189px;
+    bottom: 33px;
+    animation: blink 1.5s infinite;
+}
+@keyframes blink {
+    0% { opacity: 1; } /* Visible at start */
+    50% { opacity: 0; } /* Invisible at midpoint */
+    100% { opacity: 1; } /* Visible again at end */
+  }
+.blink2{
+    width: 3px;
+    height: 3px;
+    border-radius: 30px;
+    background-color: #ff8084;
+    position: absolute;
+    right: 125px;
+    bottom: 33px;
+    animation: blink 1.5s  infinite;
+}
+.animatemain{
+    position: absolute;
+    top: 22px;
+    right: 30px;
+    width: 6px;
+    height: 6px;
+    border-radius: 30px;
+    background-color: #ff8084;
+    animation: beat 1s ease-in-out infinite;
+   }
+   @keyframes beat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

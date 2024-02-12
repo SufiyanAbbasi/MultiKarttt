@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 // import {  ChartModule, HighchartsGantt } from 'angular-highcharts';
@@ -19,8 +19,6 @@ import { FooterComponent } from "../../shared/footer/footer.component";
     imports: [FontAwesomeModule, CommonModule, ChartsComponent, TablesComponent, EmptableComponent, DbboxesComponent, FooterComponent]
 })
 export class DashboardComponent  {
-
-
 
 id: any;
 total: any = {

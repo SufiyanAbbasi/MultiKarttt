@@ -1,19 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
-.mysvg{
-    color:#ff8084;
+* {
+  font-family: 'Work Sans', sans-serif;
 }
-.mytext{
-    color:#ff8084;
+small{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.mysvg {
+  color: #ff8084;
+}
+
+.mytext {
+  color: #ff8084;
 
 }
-.mycbtn{
-  background-color:#ff8084;
+
+.mycbtn {
+  background-color: #ff8084;
 
 }
-.btn:focus{
+
+.btn:focus {
   outline: none;
 }
-.mybar{
+
+.mybar {
   /* border: 2px solid red; */
   position: absolute;
   top: 90px;
@@ -22,15 +33,18 @@
   left: 20%;
   padding-left: 30px;
 }
+
 /* TABLE   */
-.num{
+.num {
   border-right: 1px solid grey;
   height: 40px;
-  
+
 }
-.num:hover{
+
+.num:hover {
   cursor: pointer;
 }
+
 /* .cursvg{ */
-  /* cursor: pointer; */
+/* cursor: pointer; */
 /* } */

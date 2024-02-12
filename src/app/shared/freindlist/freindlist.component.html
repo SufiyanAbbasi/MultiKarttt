@@ -1,0 +1,27 @@
+@if(friendListVisible){
+
+<div class="flist">
+    <div class="d-flex bg-white">
+        <p class="text-muted text-secondary me-5 ms-3 text-sm">FRIEND LIST</p>
+        <fa-icon [icon]="tool" class="ms-5"></fa-icon>
+    </div>
+
+    <div class="my-3 ms-4">
+        <input type="text" placeholder="Search Freind" style="width:90%" class="border border-none px-3 py-2 rounded-5">
+    </div>
+
+    <div class="bg-white ms-3 scroll me-3">
+        @for(box of myFriendlist.num; track id;){
+        <div class="d-flex pt-4 align-items-center align-content-center ps-2 mt-1 ">
+            <div>
+                <img src="{{box.img}}" alt="" class="rounded-5" style="width: 60px; height: 60px;">
+            </div>
+            <div class="ms-3">
+                <span class="fw-bold" style="font-size: 15px;">{{box.name}}</span> <br>
+                <small class="text-muted" style="font-size: 14px;">{{box.status}}</small>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+}
