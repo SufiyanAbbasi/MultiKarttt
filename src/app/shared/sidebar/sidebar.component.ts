@@ -20,7 +20,7 @@ export class SidebarComponent implements OnInit {
     sectionRoutes: { [key: string]: string } = {
         'Media': '/media',
         'Reports': '/reports',
-        'Invoice': '/invoice'
+        'Invoice': '/invoice',
         // Add more sections and their routes as needed
     };
     constructor(private sidebarService: SidebarService, private router: Router) { }
@@ -133,10 +133,15 @@ export class SidebarComponent implements OnInit {
         if (this.sectionRoutes[section]) {
             // If yes, navigate to the corresponding route
             this.router.navigate([this.sectionRoutes[section]]);
-        } else {
+        } else if (section === 'login') {
+            this.router.navigate([''])
+        }
+        else {
             // Otherwise, navigate to the section itself
             this.router.navigate([section]);
         }
+
+
     }
 
     navigateToSublist(sublist: string, section: string) {

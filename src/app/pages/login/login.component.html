@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-center" style="margin-top: 50px;" >
+<div class="d-flex justify-content-center" style="margin-top: 20px;">
 
     <div style="width: 30%; padding:70px 70px ; background-color: #ff8084; border-radius: 15px; box-shadow: 1px 5px 24px 0 rgba(255, 128, 132, 0.8); background-image: url(../../../assets/images/login-bg.png);"
         class="text-center text-white">
@@ -146,8 +146,10 @@
         </p>
     </div>
 
-    <div class="px-4" style="width: 40%;  box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, 0.05); margin-top: 20px;">
-        <p class="fs-4">Login</p>
+
+    <div class="px-4" style="width: 40%; box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, 0.05); margin-top: 20px;">
+        @if(!isRegistering){
+        <p class="fs-4 mytext">Login</p>
         <form action="">
             <input type="text" placeholder="Username" class="rounded-5 px-4 py-3"
                 style="width: 450px;     border: 1px solid #eaeaea;">
@@ -163,13 +165,34 @@
                 </div>
             </div>
             <button class="btn rounded-5 text-center text-white px-3 py-2 mt-4 ms-3"
-                style="background-color: #ff8084; width: 120px;" routerLink="">LOGIN</button>
-        </form>
+                style="background-color: #ff8084; width: 120px;" routerLink="dashboard">LOGIN</button>
 
+            <p class=" ms-3 mt-3">Didn't Have Account Please <u class="text-primary"
+                    style="cursor: pointer;"  (click)="toggleRegistration()">Register</u> </p>
+
+        </form>
+        }@if(isRegistering){
+            <p class="fs-4 mytext">Sign Up</p>
+            <form action="">
+                <input type="email" placeholder="Email" class="rounded-5 px-4 py-3"
+                    style="width: 450px;     border: 1px solid #eaeaea;">
+                <input type="text" placeholder="Name" class="rounded-5 px-4 py-3  mt-4"
+                    style="width: 450px;     border: 1px solid #eaeaea;">
+                <input type="password" placeholder="Password" class="rounded-5 px-4 py-3 mt-4"
+                    style="width: 450px;     border: 1px solid #eaeaea;">
+                
+                <button class="btn rounded-5 text-center text-white px-3 py-2 mt-4 ms-3"
+                    style="background-color: #ff8084; width: 120px;" routerLink="dashboard">Sign Up</button>
+    
+                <p class=" ms-3 mt-3">Already have Account <u class="text-primary"
+                        style="cursor: pointer;"  (click)="toggleRegistration()">Sign In</u> </p>
+    
+            </form>
+        }
     </div>
-  
+
 </div>
 <div class="text-end me-5 mb-5">
     <button class="btn rounded-5 text-center text-white px-3 py-2 mt-4 me-5"
-        style="background-color: #ff8084; width: 140px; letter-spacing: 2px;" routerLink="">BACK</button>
+        style="background-color: #ff8084; width: 140px; letter-spacing: 2px;" routerLink="dashboard">BACK</button>
 </div>

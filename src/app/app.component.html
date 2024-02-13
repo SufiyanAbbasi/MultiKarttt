@@ -1,3 +1,9 @@
+@if(isLoginPageRoute){
+<div>
+    <router-outlet></router-outlet>
+</div>
+}
+
 @if(!isLoginPageRoute){
 <div>
     <app-header class="header"></app-header>
@@ -8,10 +14,5 @@
         </main>
         <app-freindlist></app-freindlist>
     </div>
-</div>
-}
-@if(isLoginPageRoute){
-<div>
-    <router-outlet></router-outlet>
 </div>
 }

@@ -20,7 +20,8 @@ import { InvoiceComponent } from './subpages/invoice/invoice.component';
 import { LoginComponent } from './pages/login/login.component';
 
 export const routes: Routes = [
-    { path: '', component: DashboardComponent },
+    // { path: '', component: DashboardComponent },
+    { path: 'dashboard', component: DashboardComponent },
     { path: 'Order/sales', component: OrdersComponent },
     { path: 'Transactions/sales', component: TransactionsComponent },
     { path: 'List Coupons/coupons', component: CouponslistComponent },
@@ -40,5 +41,6 @@ export const routes: Routes = [
     { path: 'Taxes/localization', component: TranslationsComponent},    
     { path: 'Profile/settings', component: ProfileComponent},    
     // { path: 'login', component: LoginComponent},    
-    { path: 'login', component: LoginComponent, data: { layout: 'blank' } },
+    // { path: 'login', component: LoginComponent, data: { layout: 'blank' } },
+    { path: '', component: LoginComponent, data: { layout: 'blank' } },
 ];

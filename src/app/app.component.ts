@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        this.isLoginPageRoute = this.router.url === '/login';
+        this.isLoginPageRoute = this.router.url === '/';
       }
     });
 
